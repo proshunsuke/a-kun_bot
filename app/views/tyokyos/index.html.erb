@@ -1,0 +1,25 @@
+<h1>Listing tyokyos</h1>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tyokyos.each do |tyokyo| %>
+  <tr>
+    <td><%= tyokyo.before %></td>
+    <td><%= tyokyo.after %></td>
+    <td><%= link_to 'Show', tyokyo %></td>
+    <td><%= link_to 'Edit', edit_tyokyo_path(tyokyo) %></td>
+    <td><%= link_to 'Destroy', tyokyo, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tyokyo', new_tyokyo_path %>

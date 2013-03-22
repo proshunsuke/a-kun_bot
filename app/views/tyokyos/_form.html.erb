@@ -1,0 +1,25 @@
+<%= form_for(@tyokyo) do |f| %>
+  <% if @tyokyo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tyokyo.errors.count, "error") %> prohibited this tyokyo from being saved:</h2>
+
+      <ul>
+      <% @tyokyo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :before %><br />
+    <%= f.text_field :before %>
+  </div>
+  <div class="field">
+    <%= f.label :after %><br />
+    <%= f.text_field :after %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module TyokyosHelper
+end
