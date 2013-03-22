@@ -104,7 +104,7 @@ class TyokyosController < ApplicationController
     end
 
 
-    # Twitter.update(@msg)
+    Twitter.update(@msg_before+" : "+@msg_after)
 
     respond_to do |format|
       format.html { render :action => "tweet_tyokyo" }
