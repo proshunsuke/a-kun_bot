@@ -93,19 +93,19 @@ class TyokyosController < ApplicationController
     end
 
     # @msg = "Heloo World2"
-    # @tyokyos = Tyokyo.all this
+    @tyokyos = Tyokyo.all
 
-    # select_index = rand(@tyokyos.length);
-    # @tyokyos.each_with_index do |tyokyo,i|
-    #   if i == select_index then
-    #     @msg_before = tyokyo.before
-    #     @msg_after = tyokyo.after
-    #   end
-    # end this
+    select_index = rand(@tyokyos.length);
+    @tyokyos.each_with_index do |tyokyo,i|
+      if i == select_index then
+        @msg_before = tyokyo.before
+        @msg_after = tyokyo.after
+      end
+    end
 
-    # ここからテスト
-    @msg_before = "test"
-    @msg_after = "tweet"
+    # # ここからテスト
+    # @msg_before = "test"
+    # @msg_after = "tweet"
 
     Twitter.update(@msg_before+" : "+@msg_after)
 
